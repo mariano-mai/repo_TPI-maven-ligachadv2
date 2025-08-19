@@ -25,4 +25,10 @@ public class IngresoPorTeclado {
         return texto;
     }
 
+    public static int ingresarNumero() {
+        entrada = new Scanner(System.in);
+        int numero = entrada.nextInt();
+        return numero;
+    }
+
 }

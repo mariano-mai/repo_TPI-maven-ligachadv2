@@ -22,7 +22,7 @@ public class JugadorServiceImpl implements JugadorService{
 
     private Jugador nuevoJugador(String nombre, int edad){
         System.out.println(TextConstants.TITULAR_O_SUPLENTE);
-        int condicion = IngresoPorTeclado.ingresarEnteroPositivo();
+        int condicion = IngresoPorTeclado.ingresarNumero();
         if(condicion==1){
             return new JugadorTitular(nombre, edad);
         }else{

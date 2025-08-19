@@ -4,7 +4,7 @@ import com.mariano.app.utils.textgenerator.GeneradorDeTexto;
 
 public class GeneradorDeTextoImpl implements GeneradorDeTexto{
 
-    public static GeneradorDeTexto generadorDeTexto;
+    public static GeneradorDeTexto generadorDeTexto = new GeneradorDeTextoImpl();
 
     @Override
     public String generarNombre(String nombre, String apellido) {
