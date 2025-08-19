@@ -8,5 +8,9 @@ public interface TextConstants {
 
     public final String OPCIONES_DE_MENU_REGISTRO_JUGADORES = "1- Registrar un jugador\n2- Volver al menú anterior.\n";
 
+    public final String OPCIONES_DE_MENU_MOSTRAR = "1- Mostrar Jugadores\n2- Mostrar Equipos\n3- Volver al menú anterior.";
+
+    public final String OPCIONES_DE_MENU_MOSTRAR_JUGADORES = "1- Ver Todos\n2- Ver Titulares\n3-Ver Suplentes\n4- Volver al menú anterior";
+
     public final String TITULAR_O_SUPLENTE = "¿Titular o Suplente?\n1- Titular\n2- Suplente\n";
 }

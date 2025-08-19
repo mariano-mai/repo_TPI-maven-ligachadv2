@@ -6,4 +6,6 @@ public interface JugadorService {
 
     Jugador crearJugador(String nombre, int edad);
 
+    void mostrarTodosJugadores();
+
 }
