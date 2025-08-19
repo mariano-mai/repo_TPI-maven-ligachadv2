@@ -3,6 +3,7 @@ package com.mariano.app.service.menu.impl.principal;
 import com.mariano.app.constants.TextConstants;
 import com.mariano.app.input.IngresoPorTeclado;
 import com.mariano.app.service.menu.MenuService;
+import com.mariano.app.service.menu.impl.registro.principalregistro.MenuRegistroImpl;
 
 public class MenuPrincipalImpl implements MenuService {
 
@@ -21,6 +22,7 @@ public class MenuPrincipalImpl implements MenuService {
         switch (condicion) {
             case 1:
                 //opciones de registro
+                MenuRegistroImpl.menuRegistro.mostrarMenu();
                 break;
             case 2:
                 //opciones de ingreso y modificación de datos
@@ -29,7 +31,7 @@ public class MenuPrincipalImpl implements MenuService {
                 //opciones de mostrar información
                 break;
             default:
-                System.out.println("Fin de programa.");;
+                System.out.println("Fin de programa.");
         }
     }
 
