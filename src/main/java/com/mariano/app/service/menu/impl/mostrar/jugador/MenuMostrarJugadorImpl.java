@@ -24,7 +24,7 @@ public class MenuMostrarJugadorImpl implements MenuService{
         switch (condicion) {
             case 1:
                 //ver todos los jugadores
-                MostrarTodosJugadoresOpc.mostrarTodos.mostrarTodos();
+                MostrarTodosJugadoresOpc.mostrarTodosJug.mostrarTodos();
                 break;
             case 2:
                 //ver titulares

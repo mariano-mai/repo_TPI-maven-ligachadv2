@@ -3,6 +3,7 @@ package com.mariano.app.service.menu.impl.registro.principalregistro;
 import com.mariano.app.constants.TextConstants;
 import com.mariano.app.input.IngresoPorTeclado;
 import com.mariano.app.service.menu.MenuService;
+import com.mariano.app.service.menu.impl.registro.equipo.MenuRegistroEquipoImpl;
 import com.mariano.app.service.menu.impl.registro.jugador.MenuRegistroJugadorImpl;
 
 
@@ -29,6 +30,7 @@ public class MenuRegistroImpl implements MenuService{
                 break;
             case 2:
                 //menú registro de equipo
+                MenuRegistroEquipoImpl.menuRegistroEq.mostrarMenu();
                 break;
             case 3:
                 //menú registro de partido

@@ -8,7 +8,7 @@ public interface TextConstants {
 
     public final String OPCIONES_DE_MENU_REGISTRO_JUGADORES = "1- Registrar un jugador\n2- Volver al menú anterior.\n";
 
-    public final String OPCIONES_DE_MENU_REGISTRO_EQUIPOS = "1- Registrar un Equipo\2- Incorporar un Jugador a un Equipo\n3- Volver al menú anterior.\n";
+    public final String OPCIONES_DE_MENU_REGISTRO_EQUIPOS = "1- Registrar un Equipo\n2- Incorporar un Jugador a un Equipo\n3- Volver al menú anterior.\n";
 
     public final String OPCIONES_DE_MENU_MOSTRAR = "1- Mostrar Jugadores\n2- Mostrar Equipos\n3- Volver al menú anterior.";
 

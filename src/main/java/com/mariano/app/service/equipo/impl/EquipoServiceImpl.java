@@ -17,9 +17,9 @@ public class EquipoServiceImpl implements EquipoService{
     @Override
     public void mostrarTodosEquipos() {
         System.out.println("\nTodos Los Equipos\n");
-        System.out.printf("%40s%-30s%-30s%n", "NOMBRE", "CANT DE GOLES", "PROM GOLES/PARTIDO");
+        System.out.printf("%-40s%-30s%-30s%n", "NOMBRE", "CANT DE GOLES", "PROM GOLES/PARTIDO");
         for(Map.Entry<String,Equipo> equipo1 : EquipoRepository.equiposDB.entrySet()){
-            System.out.printf("%40s%-30d%-30d%n", 
+            System.out.printf("%-40s%-30d%-30d%n", 
                 equipo1.getValue().getNombre(), 
                 equipo1.getValue().getGoles(), 
                 0);
