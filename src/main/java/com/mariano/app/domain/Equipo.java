@@ -1,5 +1,6 @@
 package com.mariano.app.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.mariano.app.domain.jugador.Jugador;
@@ -7,9 +8,12 @@ import com.mariano.app.domain.jugador.Jugador;
 public class Equipo {
 
     private String nombre;
-    private List<Jugador> jugadores;
-    private List<Gol> goles;
+    private List<Jugador> jugadores = new ArrayList<>();
+    private List<Gol> goles = new ArrayList<>();
     
+    public Equipo() {
+    }
+
     public Equipo(String nombre) {
         this.nombre = nombre;
     }

@@ -6,6 +6,9 @@ public abstract class Jugador {
     protected int edad;
     protected int goles;
     
+    public Jugador() {
+    }
+
     public Jugador(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;

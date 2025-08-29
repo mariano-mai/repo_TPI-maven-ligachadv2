@@ -3,11 +3,14 @@ package com.mariano.app.service.menu.impl.registro.jugador;
 import com.mariano.app.constants.TextConstants;
 import com.mariano.app.input.IngresoPorTeclado;
 import com.mariano.app.service.menu.MenuService;
-import com.mariano.app.service.menu.impl.registro.jugador.opciones.RegistrarJugadorOpc;
+import com.mariano.app.service.menu.opciones.registro.jugador.RegistrarJugadorOpc;
+import com.mariano.app.service.menu.opciones.registro.jugador.impl.RegistrarJugadorOpcImpl;
 
 public class MenuRegistroJugadorImpl implements MenuService{
 
     public static MenuService menuRegistroJug = new MenuRegistroJugadorImpl();
+
+    private RegistrarJugadorOpc registrarJugadorOpc = new RegistrarJugadorOpcImpl();
 
     @Override
     public void mostrarMenu() {
@@ -23,7 +26,7 @@ public class MenuRegistroJugadorImpl implements MenuService{
     private void ejecutarOpciones(int condicion){
         switch (condicion) {
             case 1:
-                RegistrarJugadorOpc.registrarJugOpc.registrarJugador();
+                registrarJugadorOpc.registrarJugador();
                 break;
             default:
         }
