@@ -5,14 +5,17 @@ import java.util.Map;
 
 import com.mariano.app.domain.Equipo;
 import com.mariano.app.domain.jugador.Jugador;
-import com.mariano.app.domain.jugador.JugadorSuplente;
-import com.mariano.app.domain.jugador.JugadorTitular;
+//import com.mariano.app.domain.jugador.JugadorSuplente;
+//import com.mariano.app.domain.jugador.JugadorTitular;
 import com.mariano.app.input.IngresoPorTeclado;
 import com.mariano.app.repository.equipo.EquipoRepository;
 import com.mariano.app.repository.jugador.JugadorRepository;
 import com.mariano.app.utils.search.BusquedaDeElemento;
 
 public class BusquedaDeElementoImpl implements BusquedaDeElemento{
+
+    Jugador nuevoJugador;
+    Equipo nuevoEquipo;
 
     @Override
     public Equipo buscarEquipo() {
@@ -21,7 +24,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
 
     private Equipo buscarEquipo(Map<String, Equipo> equipos){
         Map<Integer, Equipo> mapaTemporal = new HashMap<>();
-        Equipo nuevoEquipo = new Equipo();
+        //Equipo nuevoEquipo = new Equipo();
         System.out.println("\nSelección de Equipo\n");
         int i = 1;
         for(Map.Entry<String, Equipo> equipo1 : equipos.entrySet()){
@@ -52,7 +55,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
 
     private Jugador buscarJugadorTitular(Map<String, Jugador> jugadores){
         Map<Integer, Jugador> mapaTemporal = new HashMap<>();
-        Jugador nuevoJugador = new JugadorTitular();
+        //Jugador nuevoJugador = new JugadorTitular();
         System.out.println("\nSelección de Jugador\n");
         System.out.println("\nIngrese la primer letra del APELLIDO del Jugador:");
         String letra = IngresoPorTeclado.ingresarTexto().toUpperCase();
@@ -78,7 +81,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
 
     private Jugador buscarJugadorSuplente(Map<String, Jugador> jugadores){
         Map<Integer, Jugador> mapaTemporal = new HashMap<>();
-        Jugador nuevoJugador = new JugadorSuplente();
+        //Jugador nuevoJugador = new JugadorSuplente();
         System.out.println("\nSelección de Jugador\n");
         System.out.println("\nIngrese la primer letra del APELLIDO del Jugador:");
         String letra = IngresoPorTeclado.ingresarTexto().toUpperCase();
