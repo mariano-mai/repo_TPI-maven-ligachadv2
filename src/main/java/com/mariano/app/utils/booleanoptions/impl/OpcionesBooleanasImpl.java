@@ -11,7 +11,7 @@ public class OpcionesBooleanasImpl implements OpcionesBooleanas{
     @Override
     public boolean siONo(String opcion1, String opcion2) {
         System.out.println("1- "+opcion1+"\n2- "+opcion2);
-        opcion = IngresoPorTeclado.ingresarNumero();
+        opcion = IngresoPorTeclado.ingresarEnteroPositivo();
         if(opcion == 1){
             esVerdadero = true;
         }

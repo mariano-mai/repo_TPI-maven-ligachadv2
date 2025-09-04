@@ -18,7 +18,7 @@ public class MenuRegistroEquipoImpl implements MenuService{
         do{
             System.out.println("Seleccione una opción:");
             System.out.println(TextConstants.OPCIONES_DE_MENU_REGISTRO_EQUIPOS);
-            condicion = IngresoPorTeclado.ingresarNumero();
+            condicion = IngresoPorTeclado.ingresarEnteroPositivo();
             ejecutarOpciones(condicion);
         }while(condicion!=3);
     }

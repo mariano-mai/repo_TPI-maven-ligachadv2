@@ -11,7 +11,7 @@ public class IngresoPorTeclado {
         int valor = -1;
         while(valor<0) {
             try {
-                valor = IngresoPorTeclado.ingresarEnteroPositivo();
+                valor = Integer.parseInt(entrada.nextLine());
             }catch(NumberFormatException e) {
                 System.out.println("Entrada inválida. Ingrese un entero positivo.");
             }

@@ -16,7 +16,7 @@ public class MenuPrincipalImpl implements MenuService {
         do{
             System.out.println("Seleccione una opción:");
             System.out.println(TextConstants.OPCIONES_DE_MENU_PRINCIPAL);
-            condicion = IngresoPorTeclado.ingresarNumero();
+            condicion = IngresoPorTeclado.ingresarEnteroPositivo();
             ejecutarOpciones(condicion);
         }while(condicion!=4);
     }

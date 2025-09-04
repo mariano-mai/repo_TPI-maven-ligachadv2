@@ -5,8 +5,6 @@ import java.util.Map;
 
 import com.mariano.app.domain.Equipo;
 import com.mariano.app.domain.jugador.Jugador;
-//import com.mariano.app.domain.jugador.JugadorSuplente;
-//import com.mariano.app.domain.jugador.JugadorTitular;
 import com.mariano.app.input.IngresoPorTeclado;
 import com.mariano.app.repository.equipo.EquipoRepository;
 import com.mariano.app.repository.jugador.JugadorRepository;
@@ -36,7 +34,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
             for(Map.Entry<Integer, Equipo> equipo2 : mapaTemporal.entrySet()){
                 System.out.println(equipo2.getKey()+"- "+equipo2.getValue().getNombre());
             }
-            int valor = IngresoPorTeclado.ingresarNumero();
+            int valor = IngresoPorTeclado.ingresarEnteroPositivo();
             nuevoEquipo = mapaTemporal.get(valor);
         }else if(i==1){
             System.out.println("\nNo se encontraron equipos.");
@@ -56,7 +54,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
     private Jugador buscarJugadorTitular(Map<String, Jugador> jugadores){
         Map<Integer, Jugador> mapaTemporal = new HashMap<>();
         //Jugador nuevoJugador = new JugadorTitular();
-        System.out.println("\nSelección de Jugador\n");
+        System.out.println("\nSelección de Jugador");
         System.out.println("\nIngrese la primer letra del APELLIDO del Jugador:");
         String letra = IngresoPorTeclado.ingresarTexto().toUpperCase();
         int i = 1;
@@ -71,7 +69,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
             for(Map.Entry<Integer, Jugador> jugador2 : mapaTemporal.entrySet()){
                 System.out.println(jugador2.getKey()+"- "+jugador2.getValue().getNombre());
             }
-            int valor = IngresoPorTeclado.ingresarNumero();
+            int valor = IngresoPorTeclado.ingresarEnteroPositivo();
             nuevoJugador = mapaTemporal.get(valor);
         }else if(i==1){
             System.out.println("\nNo se encontraron Jugadores.");
@@ -82,7 +80,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
     private Jugador buscarJugadorSuplente(Map<String, Jugador> jugadores){
         Map<Integer, Jugador> mapaTemporal = new HashMap<>();
         //Jugador nuevoJugador = new JugadorSuplente();
-        System.out.println("\nSelección de Jugador\n");
+        System.out.println("\nSelección de Jugador");
         System.out.println("\nIngrese la primer letra del APELLIDO del Jugador:");
         String letra = IngresoPorTeclado.ingresarTexto().toUpperCase();
         int i = 1;
@@ -97,7 +95,7 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
             for(Map.Entry<Integer, Jugador> jugador2 : mapaTemporal.entrySet()){
                 System.out.println(jugador2.getKey()+"- "+jugador2.getValue().getNombre());
             }
-            int valor = IngresoPorTeclado.ingresarNumero();
+            int valor = IngresoPorTeclado.ingresarEnteroPositivo();
             nuevoJugador = mapaTemporal.get(valor);
         }else if(i==1){
             System.out.println("\nNo se encontraron Jugadores.");

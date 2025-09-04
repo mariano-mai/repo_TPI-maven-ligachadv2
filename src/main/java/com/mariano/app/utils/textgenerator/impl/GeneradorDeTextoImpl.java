@@ -8,7 +8,7 @@ public class GeneradorDeTextoImpl implements GeneradorDeTexto{
 
     @Override
     public String generarNombre(String nombre, String apellido) {
-        return apellido+", "+nombre;
+        return apellido.toUpperCase()+", "+nombre;
     }
 
 }
