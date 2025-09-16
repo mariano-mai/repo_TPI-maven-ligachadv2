@@ -6,4 +6,6 @@ public interface RegistrarEquipoOpc {
 
     void incorporarJugador();
 
+    void incorporarJugadorV2();
+
 }

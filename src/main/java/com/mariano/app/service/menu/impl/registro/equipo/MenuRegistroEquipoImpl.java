@@ -30,7 +30,7 @@ public class MenuRegistroEquipoImpl implements MenuService{
                 break;
             case 2:
                 //incorporar un Jugador a un Equipo
-                registrarEquipoOpc.incorporarJugador();
+                registrarEquipoOpc.incorporarJugadorV2();
                 break;
             default:
                 break;

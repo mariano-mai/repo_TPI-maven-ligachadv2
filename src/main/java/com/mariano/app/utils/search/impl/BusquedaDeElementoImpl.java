@@ -31,11 +31,17 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
         }
         if(i!=1){
             System.out.println("\nSeleccione el Equipo:\n");
+            System.out.println("0- El Equipo que busco no se encuentra en la lista.");
             for(Map.Entry<Integer, Equipo> equipo2 : mapaTemporal.entrySet()){
                 System.out.println(equipo2.getKey()+"- "+equipo2.getValue().getNombre());
             }
             int valor = IngresoPorTeclado.ingresarEnteroPositivo();
-            nuevoEquipo = mapaTemporal.get(valor);
+            //nuevoEquipo = mapaTemporal.get(valor);
+            if(valor==0){
+                return null;
+            }else{
+                nuevoEquipo = mapaTemporal.get(valor);
+            }
         }else if(i==1){
             System.out.println("\nNo se encontraron equipos.");
         }
@@ -66,11 +72,17 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
         }
         if(i!=1){
             System.out.println("\nSeleccione el Jugador:\n");
+            System.out.println("0- El Jugador que busco no se encuentra en la lista.");
             for(Map.Entry<Integer, Jugador> jugador2 : mapaTemporal.entrySet()){
                 System.out.println(jugador2.getKey()+"- "+jugador2.getValue().getNombre());
             }
             int valor = IngresoPorTeclado.ingresarEnteroPositivo();
-            nuevoJugador = mapaTemporal.get(valor);
+            //nuevoJugador = mapaTemporal.get(valor);
+            if(valor==0){
+                return null;
+            }else{
+                nuevoJugador = mapaTemporal.get(valor);
+            }
         }else if(i==1){
             System.out.println("\nNo se encontraron Jugadores.");
         }
@@ -92,11 +104,17 @@ public class BusquedaDeElementoImpl implements BusquedaDeElemento{
         }
         if(i!=1){
             System.out.println("\nSeleccione el Jugador:\n");
+            System.out.println("0- El Jugador que busco no se encuentra en la lista.");
             for(Map.Entry<Integer, Jugador> jugador2 : mapaTemporal.entrySet()){
                 System.out.println(jugador2.getKey()+"- "+jugador2.getValue().getNombre());
             }
             int valor = IngresoPorTeclado.ingresarEnteroPositivo();
-            nuevoJugador = mapaTemporal.get(valor);
+            //nuevoJugador = mapaTemporal.get(valor);
+            if(valor==0){
+                return null;
+            }else{
+                nuevoJugador = mapaTemporal.get(valor);
+            }
         }else if(i==1){
             System.out.println("\nNo se encontraron Jugadores.");
         }
