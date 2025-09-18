@@ -9,14 +9,17 @@ import com.mariano.app.service.equipo.impl.EquipoServiceImpl;
 import com.mariano.app.service.menu.opciones.registro.equipo.RegistrarEquipoOpc;
 import com.mariano.app.utils.booleanoptions.OpcionesBooleanas;
 import com.mariano.app.utils.booleanoptions.impl.OpcionesBooleanasImpl;
-import com.mariano.app.utils.search.BusquedaDeElemento;
-import com.mariano.app.utils.search.impl.BusquedaDeElementoImpl;
+import com.mariano.app.utils.search.equipo.BuscarElementoEquipo;
+import com.mariano.app.utils.search.equipo.impl.BuscarElementoEquipoImpl;
+import com.mariano.app.utils.search.jugador.BuscarElementoJugador;
+import com.mariano.app.utils.search.jugador.impl.BuscarElementoJugadorImpl;
 
 public class RegistrarEquipoOpcImpl implements RegistrarEquipoOpc{
 
     private EquipoService equipoService = new EquipoServiceImpl();
 
-    private BusquedaDeElemento buscarElemento = new BusquedaDeElementoImpl();
+    private BuscarElementoEquipo buscarEquipo = new BuscarElementoEquipoImpl();
+    private BuscarElementoJugador buscarJugador = new BuscarElementoJugadorImpl();
     private OpcionesBooleanas opcionesBooleanas = new OpcionesBooleanasImpl();
 
     Equipo nuevoEquipo;
@@ -34,13 +37,13 @@ public class RegistrarEquipoOpcImpl implements RegistrarEquipoOpc{
     @Override
     public void incorporarJugador() {
         try {
-            nuevoEquipo = buscarElemento.buscarEquipo();
+            nuevoEquipo = buscarEquipo.buscarEquipo();
         } catch (NullPointerException e) {
             System.out.println("\nAsegúrece de que el Equipo que busca esté registrado.\n");
         }
         esTitular = opcionesBooleanas.siONo("Titular", "Suplente");
         try {
-            nuevoJugador = buscarElemento.buscarJugador(esTitular);
+            nuevoJugador = buscarJugador.buscarJugador(esTitular);
         } catch (NullPointerException e) {
             System.out.println("\nAsegúrece de que el Jugador que busca esté registrado.\n");
         }
@@ -53,7 +56,7 @@ public class RegistrarEquipoOpcImpl implements RegistrarEquipoOpc{
     @Override
     public void incorporarJugadorV2() {
         try {
-            nuevoEquipo = buscarElemento.buscarEquipo();
+            nuevoEquipo = buscarEquipo.buscarEquipo();
         } catch (NullPointerException e) {
             System.out.println("\nAsegúrece de que el Equipo que busca esté registrado.\n");
         }
@@ -62,7 +65,7 @@ public class RegistrarEquipoOpcImpl implements RegistrarEquipoOpc{
         }else{
             esTitular = opcionesBooleanas.siONo("Titular", "Suplente");
             try {
-                nuevoJugador = buscarElemento.buscarJugador(esTitular);
+                nuevoJugador = buscarJugador.buscarJugador(esTitular);
             } catch (NullPointerException e) {
                 System.out.println("\nAsegúrese de que el Jugador que busca esté registrado.\n");
             }
