@@ -6,4 +6,6 @@ public interface MostrarInformacionComplementaria {
 
     void mostrarJugadoresDe(Equipo equipo);
 
+    void mostrarPartidos();
+
 }
