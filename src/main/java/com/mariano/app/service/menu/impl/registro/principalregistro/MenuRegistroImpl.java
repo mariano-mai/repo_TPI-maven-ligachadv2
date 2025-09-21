@@ -5,6 +5,7 @@ import com.mariano.app.input.IngresoPorTeclado;
 import com.mariano.app.service.menu.MenuService;
 import com.mariano.app.service.menu.impl.registro.equipo.MenuRegistroEquipoImpl;
 import com.mariano.app.service.menu.impl.registro.jugador.MenuRegistroJugadorImpl;
+import com.mariano.app.service.menu.impl.registro.partido.MenuRegistroPartidoImpl;
 
 
 public class MenuRegistroImpl implements MenuService{
@@ -34,6 +35,8 @@ public class MenuRegistroImpl implements MenuService{
                 break;
             case 3:
                 //menú registro de partido
+                //mostrar los partidos existentes
+                MenuRegistroPartidoImpl.menuRegistroPart.mostrarMenu();
                 break;
             default:
         }
