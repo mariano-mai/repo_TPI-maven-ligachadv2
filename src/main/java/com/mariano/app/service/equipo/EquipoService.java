@@ -11,4 +11,6 @@ public interface EquipoService {
 
     void incorporarJugador(Equipo equipo, Jugador jugador);
 
+    void agregarGolA(Equipo equipo);
+
 }

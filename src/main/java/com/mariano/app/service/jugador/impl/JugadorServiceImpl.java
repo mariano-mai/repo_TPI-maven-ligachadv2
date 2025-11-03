@@ -42,4 +42,10 @@ public class JugadorServiceImpl implements JugadorService{
         }
     }
 
+    @Override
+    public void ingresarGolA(Jugador jugador) {
+        int golesDeJugador = jugador.getGoles();
+        jugador.setGoles(golesDeJugador+1);
+    }
+
 }

@@ -8,4 +8,6 @@ public interface JugadorService {
 
     void mostrarTodosJugadores();
 
+    void ingresarGolA(Jugador jugador);
+
 }
