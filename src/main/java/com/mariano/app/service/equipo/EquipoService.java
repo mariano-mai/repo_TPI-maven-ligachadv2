@@ -1,6 +1,7 @@
 package com.mariano.app.service.equipo;
 
 import com.mariano.app.domain.Equipo;
+import com.mariano.app.domain.Partido;
 import com.mariano.app.domain.jugador.Jugador;
 
 public interface EquipoService {
@@ -11,6 +12,6 @@ public interface EquipoService {
 
     void incorporarJugador(Equipo equipo, Jugador jugador);
 
-    void agregarGolA(Equipo equipo);
+    void agregarGolA(Equipo equipo, Partido partido);
 
 }

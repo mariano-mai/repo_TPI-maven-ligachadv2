@@ -8,12 +8,8 @@ import com.mariano.app.domain.Partido;
 import com.mariano.app.domain.jugador.Jugador;
 import com.mariano.app.repository.equipo.EquipoRepository;
 import com.mariano.app.service.equipo.EquipoService;
-import com.mariano.app.utils.search.partido.BuscarElementoPartido;
-import com.mariano.app.utils.search.partido.impl.BuscarElementoPartidoImpl;
 
 public class EquipoServiceImpl implements EquipoService{
-
-    private BuscarElementoPartido buscarPartido = new BuscarElementoPartidoImpl();
 
     @Override
     public Equipo crearEquipo(String nombre) {
@@ -39,8 +35,8 @@ public class EquipoServiceImpl implements EquipoService{
     }
 
     @Override
-    public void agregarGolA(Equipo equipo) {
-        Gol nuevoGol = crearGol(buscarPartido.buscarPartido());
+    public void agregarGolA(Equipo equipo, Partido partido) {
+        Gol nuevoGol = crearGol(partido);
         equipo.getGoles().add(nuevoGol);
     }
 
